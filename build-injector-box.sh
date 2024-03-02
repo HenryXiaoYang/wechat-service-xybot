@@ -2,18 +2,21 @@
 mkdir docker_buiding || true
 # update injector-box
 if [ ! -d docker_buiding/injector-box ]; then
+    mkdir -p docker_buiding/injector-box
     cp -r injector-box/* docker_buiding/injector-box || echo "copy injector-box failed"
 else
     echo "injector-box already exists"
 fi
 
 if [ ! -d docker_buiding/injector-box/target ]; then
+    mkdir -p docker_buiding/injector-box/target
     cp -r wechat-box-wechat-3.6.0.18/* docker_buiding/injector-box/target || echo "copy wechat-box-wechat-3.6.0.18 failed"
 else
     echo "wechat-box-wechat-3.6.0.18 already exists"
 fi
 
 if [ ! -f docker_buiding/injector-box/target/root/WeChatSetup-v3.6.0.18.exe ]; then
+  mkdir -p docker_buiding/injector-box/target/root
   if [ ! -f WeChatSetup-v3.6.0.18.exe ]; then
     wget https://yangres.com/WeChatSetup-v3.6.0.18.exe
   fi
