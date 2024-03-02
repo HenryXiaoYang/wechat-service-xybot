@@ -14,7 +14,10 @@ else
 fi
 
 if [ ! -f docker_buiding/injector-box/target/root/WeChatSetup-v3.6.0.18.exe ]; then
-    wget -P docker_buiding/injector-box/target/root https://yangres.com/WeChatSetup-v3.6.0.18.exe
+  if [ ! -f WeChatSetup-v3.6.0.18.exe ]; then
+    wget https://yangres.com/WeChatSetup-v3.6.0.18.exe
+  fi
+  cp WeChatSetup-v3.6.0.18.exe docker_buiding/injector-box/target/root
 fi
 cp bin_deps/auto.dll docker_buiding/injector-box/root/drive_c/injector
 cd docker_buiding/injector-box
