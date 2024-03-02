@@ -23,6 +23,6 @@ if [ ! -f docker_buiding/injector-box/target/root/WeChatSetup-v3.6.0.18.exe ]; t
   cp WeChatSetup-v3.6.0.18.exe docker_buiding/injector-box/target/root
 fi
 cp bin_deps/auto.dll docker_buiding/injector-box/root/drive_c/injector
-cd docker_buiding/injector-box
+cd docker_buiding/injector-box || exit
 sudo docker build -t henryxiaoyang/wechat-service-xybot:latest .
 cd -
