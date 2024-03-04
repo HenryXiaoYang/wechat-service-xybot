@@ -18,7 +18,7 @@ fi
 if [ ! -f docker_buiding/injector-box/target/root/WeChatSetup-v3.6.0.18.exe ]; then
   mkdir -p docker_buiding/injector-box/target/root
   if [ ! -f WeChatSetup-v3.6.0.18.exe ]; then
-    wget https://yangres.com/WeChatSetup-v3.6.0.18.exe
+    wget http://file.yangres.com/WeChatSetup-v3.6.0.18.exe
   fi
   cp WeChatSetup-v3.6.0.18.exe docker_buiding/injector-box/target/root
 fi
