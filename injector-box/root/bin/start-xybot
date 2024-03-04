@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+#mind the permission of this file
 function run-xybot() {
   while :
   do
