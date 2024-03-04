@@ -48,9 +48,14 @@ function install() {
 
 function install-xybot() {
     cd ~ || exit
+    echo "Start to install pip..."
+    python get-pip.py -i https://pypi.tuna.tsinghua.edu.cn/simple
+    echo "Complete install pip"
+    echo "Start to install xybot..."
     git clone https://github.com/HenryXiaoYang/XYBot.git XYBot
     cd XYBot || exit
     pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    echo "Complete install xybot"
 }
 
 wine /WeChatSetup-v3.6.0.18.exe &

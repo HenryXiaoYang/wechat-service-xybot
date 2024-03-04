@@ -16,6 +16,7 @@ function run-target() {
 }
 
 function run-xybot() {
+
   cd ~/XYBot || exit
   python3 start.py
 }
