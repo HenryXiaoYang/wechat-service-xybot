@@ -16,9 +16,17 @@ function run-target() {
 }
 
 function run-xybot() {
-
-  cd ~/XYBot || exit
-  python3 start.py
+  while :
+  do
+    cd ~/XYBot || exit
+    python3 start.py
+    if [ $? -eq 0 ]
+    then
+      exit 0
+    fi
+    echo "start.py crashed with exit code $?. Respawning.." >&2
+    sleep 1
+  done
 }
 
 /entrypoint.sh &
