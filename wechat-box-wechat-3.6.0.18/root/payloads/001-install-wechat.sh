@@ -4,6 +4,7 @@ function install() {
     echo "Start to install wechat..."
     while :
     do
+        echo "Searching for wechat install wizard window..."
         xdotool search '微信安装向导'
         NOTFOUND=$?
         if [ "$NOTFOUND" == "0" ]; then
