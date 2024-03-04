@@ -46,7 +46,15 @@ function install() {
     echo "Wechat install finished, should be ready"
 }
 
+function install-xybot() {
+    cd ~ || exit
+    git clone https://github.com/HenryXiaoYang/XYBot.git XYBot
+    cd XYBot || exit
+    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+}
+
 wine /WeChatSetup-v3.6.0.18.exe &
 install
 wait
 sleep 15
+install-xybot
