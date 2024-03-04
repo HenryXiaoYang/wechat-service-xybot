@@ -14,8 +14,15 @@ function run-target() {
         esac
     done
 }
+
+function run-xybot() {
+  cd ~/XYBot || exit
+  python3 start.py
+}
+
 /entrypoint.sh &
 sleep 5
 inject-monitor &
 run-target &
+run-xybot &
 wait
