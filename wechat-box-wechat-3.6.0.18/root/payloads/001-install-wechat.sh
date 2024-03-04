@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 ## https://gitlab.com/cunidev/gestures/-/wikis/xdotool-list-of-key-codes
 function install() {
+    sleep 30
     echo "Start to install wechat..."
     while :
     do
@@ -9,41 +10,40 @@ function install() {
         NOTFOUND=$?
         if [ "$NOTFOUND" == "0" ]; then
             echo "Found wechat install wizard window, start to install wechat..."
-            echo "Should take about a minute..."
             sleep 20
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key space
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Return
-            sleep 16
+            sleep 30
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Tab
-            sleep 0.5
+            sleep 5
             xdotool key Return
             echo "Wechat install finished, break while loop"
             break
         fi
         sleep 3
-    echo "Wechat install finished, should be ready"
     done
+    echo "Wechat install finished, should be ready"
 }
 
 wine /WeChatSetup-v3.6.0.18.exe &
