@@ -50,7 +50,7 @@ function install-xybot() {
     cd ~ || exit
     echo "Start to install pip..."
     wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
-    python get-pip.py -i https://pypi.tuna.tsinghua.edu.cn/simple
+    python3 get-pip.py -i https://pypi.tuna.tsinghua.edu.cn/simple
     echo "Complete install pip"
     echo "Start to install xybot..."
     git clone https://github.com/HenryXiaoYang/XYBot.git XYBot
