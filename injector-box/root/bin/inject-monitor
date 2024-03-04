@@ -16,3 +16,4 @@ function monitor() {
     done
 }
 monitor
+start-xybot
