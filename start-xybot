@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+cd /home/app/XYBot
+while true; do
+    sudo python3 start.py #开摆 sb权限
+
+    exit_code=$?
+    if [ $exit_code -eq 0 ]; then
+        echo "XYBot exited successfully."
+        break
+    else
+        echo "XYBot crashed. Restarting..."
+        sleep 1
+    fi
+done
