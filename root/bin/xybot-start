@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-cd /home/app/XYBot
+cd /home/app/XYBot || exit
 while true; do
-    sudo python3 start.py #开摆 sb权限
+    sudo python3 start.py
 
     exit_code=$?
     if [ $exit_code -eq 0 ]; then

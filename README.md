@@ -8,7 +8,7 @@
 sodu docker pull henryxiaoyang/wechat-service-xybot:latest
 
 # Step 2: run
-sudo docker run -it --name wechat-service-xybot  \
+docker run -it --name wechat-service-xybot  \
     -e HOOK_PROC_NAME=WeChat \
     -e HOOK_DLL=auto.dll \
     -e TARGET_AUTO_RESTART="yes" \
@@ -16,6 +16,7 @@ sudo docker run -it --name wechat-service-xybot  \
     -e TARGET_CMD=wechat-start \
     -p 4000:8080 -p 5555:5555 -p 5900:5900 \
     --add-host=dldir1.qq.com:127.0.0.1 \
+    -v XYBot:/home/app/XYBot \
     henryxiaoyang/wechat-service-xybot:latest
 ```
 

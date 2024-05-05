@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+wine '/home/app/wechat_launcher_bypass_ver_check.exe'
